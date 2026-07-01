@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CosmeticLAB | Documentación</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="image-modal" id="imageModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar vista ampliada">×</button>
+    <img id="modalImage" src="" alt="">
+  </div>
+
+  <aside class="sidebar">
+    <h2>CosmeticLAB</h2>
+    <p>Documentación del Proyecto</p>
+    <nav>
+      <a href="#inicio">🏠 Inicio</a>
+      <a href="#introduccion">💡 Introducción</a>
+      <a href="#problema">⚠ Situación Problema</a>
+      <a href="#pregunta">❓ Pregunta</a>
+      <a href="#objetivos">🎯 Objetivos</a>
+
+      <div class="nav-group">
+        <a href="#diagramas">📊 Diagramas</a>
+        <div class="submenu">
+          <a href="#mapa-navegacion">• Mapa de navegación</a>
+          <a href="#diagrama-procesos">• Diagrama de procesos</a>
+          <a href="#diagrama-clases">• Diagrama de clases</a>
+          <a href="#mer-base-datos">• MER / Base de datos</a>
+          <a href="#diagrama-conceptual">• Diagrama conceptual</a>
+        </div>
+      </div>
+
+      <div class="nav-group">
+        <a href="#arquitectura">🏗 Arquitectura</a>
+        <div class="submenu">
+          <a href="#presentacion">• Presentación</a>
+          <a href="#logica-negocio">• Lógica de negocio</a>
+          <a href="#persistencia">• Persistencia</a>
+          <a href="#flujo-arquitectura">• Flujo cliente-servidor</a>
+        </div>
+      </div>
+
+      <a href="#prototipo">🎨 Prototipo</a>
+      <a href="#documentacion">📄 Documentación</a>
+      <a href="#resumen">📌 Resumen</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-badges">
+        <span class="badge">Proyecto Formativo ADSO</span>
+        <span class="badge">2026</span>
+        <span class="badge">Emprendimiento digital</span>
+      </div>
+      <h1>CosmeticLAB</h1>
+      <h3>Plataforma web para la gestión de productos cosméticos, pedidos y presencia digital.</h3>
+      <p>Una solución moderna para organizar, vender y fortalecer un negocio de belleza.</p>
+      <div>
+        <a class="btn" href="#introduccion">▶ Comenzar presentación</a>
+        <a class="btn secondary" href="#prototipo">🎨 Ver prototipo</a>
+      </div>
+    </section>
+
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <blockquote>
+        <h3>¿Cómo puede un pequeño emprendimiento competir en un mercado cada vez más digital?</h3>
+      </blockquote>
+
+      <p>
+        CosmeticLAB nace como respuesta a esta pregunta, desarrollando una plataforma web
+        que fortalece la presencia digital del emprendimiento y mejora la gestión de sus
+        productos y pedidos.
+      </p>
+    </section>
+
+    <section id="problema">
+      <h2>Situación Problema</h2>
+      <div class="card">
+        <p>El crecimiento de los pequeños emprendimientos de belleza ha incrementado la necesidad de contar con herramientas digitales que faciliten la administración del negocio. Actualmente, muchos de estos comercios dependen de redes sociales y procesos manuales para gestionar sus productos, pedidos y clientes, lo que dificulta mantener una organización eficiente.</p>
+      </div>
+      <div class="card">
+        <p>En el caso de CosmeticLAB, la clienta ofrece servicios de maquillaje y comercializa productos cosméticos, pero busca fortalecer la organización de su inventario y ampliar el alcance de su emprendimiento mediante una presencia digital más profesional.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h4>Gestión Manual</h4>
+          <p>La administración del catálogo, inventario y pedidos puede volverse lenta y propensa a errores cuando se realiza mediante diferentes herramientas o registros manuales.</p>
+        </div>
+        <div class="card">
+          <h4>Crecimiento del Emprendimiento</h4>
+          <p>A medida que aumenta la cantidad de productos y clientes, resulta más difícil mantener un control organizado de la información.</p>
+        </div>
+        <div class="card">
+          <h4>Baja Presencia Digital</h4>
+          <p>Depender únicamente de redes sociales limita la visibilidad del negocio y reduce las oportunidades de llegar a nuevos clientes.</p>
+        </div>
+        <div class="card">
+          <h4>Competencia del Mercado</h4>
+          <p>En un entorno altamente competitivo, contar con una plataforma web profesional puede marcar la diferencia frente a otros emprendimientos que ofrecen productos similares.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pregunta">
+      <h2>Pregunta Problema</h2>
+
+      <blockquote>
+        ¿Cómo puede CosmeticLAB organizar de manera más eficiente la gestión de sus productos, pedidos y presencia digital a través de una plataforma web?
+      </blockquote>
+
+      <p>
+        Esta pregunta dio origen al desarrollo del proyecto y sirvió como punto de partida para identificar las principales necesidades del emprendimiento.
+      </p>
+
+      <p>
+        A partir de este interrogante se analizaron las dificultades presentes en la administración del negocio, la relación con los clientes y las oportunidades de crecimiento en el entorno digital.
+      </p>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos</h2>
+      <h3>Objetivo General</h3>
+
+      <p>
+        Desarrollar una plataforma web para el emprendimiento CosmeticLAB que fortalezca
+        su presencia digital mediante un catálogo virtual de productos y un sistema de
+        gestión de pedidos, optimizando la administración del inventario, los productos
+        y las solicitudes de los clientes para contribuir al crecimiento y la eficiencia
+        del negocio.
+      </p>
+
+      <h3>Objetivos Específicos</h3>
+
+      <p>
+        Para alcanzar el objetivo general, el proyecto se orientó al desarrollo de los
+        siguientes objetivos específicos:
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h4>📦 Catálogo Virtual</h4>
+          <p>Mostrar de forma organizada la información y disponibilidad de los productos.</p>
+        </div>
+
+        <div class="card">
+          <h4>📋 Gestión de Productos</h4>
+          <p>Registrar, actualizar y controlar el inventario desde el panel administrativo.</p>
+        </div>
+
+        <div class="card">
+          <h4>🛒 Gestión de Pedidos</h4>
+          <p>Administrar las solicitudes realizadas por los clientes de manera eficiente.</p>
+        </div>
+
+        <div class="card">
+          <h4>💬 Contacto</h4>
+          <p>Facilitar la comunicación entre los clientes y el emprendimiento.</p>
+        </div>
+
+        <div class="card">
+          <h4>🔐 Administración</h4>
+          <p>Garantizar una gestión segura mediante autenticación y control de acceso.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagramas" class="slide-intro-minimal">
+      <blockquote>
+        <h2>Ingeniería y Blueprint del Proyecto</h2>
+      </blockquote>
+      
+      <p class="main-statement">
+        Modelado integral del sistema: Desde la experiencia del usuario hasta el almacenamiento de la información.
+      </p>
+
+      <p class="sub-statement">
+        Análisis detallado de nuestros diagramas de <strong>Casos de Uso</strong>, <strong>Procesos</strong>, <strong>MER</strong> y <strong>Base de Datos</strong>.
+      </p>
+    </section>
+
+    <section class="microsection" id="mapa-navegacion">
+      <div class="card">
+        <h4>Mapa de Navegación</h4>
+        <div class="diagram-container">
+          <img src="img/Mapa de navegación.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section class="microsection" id="diagrama-procesos">
+      <div class="card">
+        <h4>Diagrama de Procesos</h4>
+        <div class="diagram-container">
+          <img src="img/Diagrama de Procesos.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section class="microsection" id="diagrama-clases">
+      <div class="card">
+        <h4>Diagrama de Clases</h4>
+        <div class="diagram-container">
+          <img src="img/Diagrama_de_clases_UML.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section class="microsection" id="mer-base-datos">
+      <div class="card">
+        <h4>Modelo Entidad-Relación</h4>
+        <div class="diagram-container">
+          <img src="img/Diagrama de MER.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section class="microsection" id="diagrama-conceptual">
+      <div class="card">
+        <h4>Diagrama Conceptual</h4>
+        <div class="diagram-container">
+          <img src="img/Diagrama conceptual.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section class="microsection" id="mer-Casos-De-Usos">
+      <div class="card">
+        <h4>Diagramas de Casos de Uso</h4>
+        <div class="diagram-container">
+          <img src="img/Diagrama de casos de uso.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+        </div>
+      </div>
+    </section>
+
+    <section id="arquitectura">
+
+    <h2>Arquitectura del Sistema</h2>
+
+    <p class="intro">
+        CosmeticLAB fue desarrollado bajo una <strong>arquitectura monolítica organizada en capas</strong>,
+        una solución que separa claramente la interfaz de usuario, la lógica de negocio y la persistencia
+        de datos. Esta organización facilita el mantenimiento del sistema, mejora la escalabilidad y permite
+        incorporar nuevas funcionalidades sin modificar la estructura principal.
+    </p>
+
+    <div class="architecture-grid">
+
+    <div class="layer-card" id="presentacion">
+        <h3>🎨 Presentación</h3>
+        <p>
+            Es la capa con la que interactúa el usuario.
+            Presenta la información y captura las acciones
+            realizadas desde el navegador.
+        </p>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Bootstrap 5</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <div class="layer-card" id="logica-negocio">
+        <h3>⚙️ Lógica de Negocio</h3>
+        <p>
+            Procesa todas las solicitudes del sistema,
+            valida la información y ejecuta las reglas
+            del negocio.
+        </p>
+        <ul>
+            <li>PHP 8</li>
+            <li>CRUD Productos</li>
+            <li>Gestión Pedidos</li>
+            <li>Administración</li>
+        </ul>
+    </div>
+
+    <div class="layer-card" id="persistencia">
+        <h3>🗄 Persistencia</h3>
+        <p>
+            Almacena toda la información del sistema
+            de forma estructurada y segura.
+        </p>
+        <ul>
+
+            <li>MySQL</li>
+            <li>Productos</li>
+            <li>Pedidos</li>
+            <li>Usuarios</li>
+        </ul>
+    </div>
+</div>
+
+    </section>
+    <section class="microsection">
+
+      <h3>Tecnologías Implementadas</h3>
+
+      <div class="tech-stack">
+
+      <div class="tech">🌐 HTML5</div>
+
+      <div class="tech">🎨 CSS3</div>
+
+      <div class="tech">📱 Bootstrap</div>
+
+      <div class="tech">⚡ JavaScript</div>
+
+      <div class="tech">🐘 PHP 8</div>
+
+      <div class="tech">🛢 MySQL</div>
+
+      <div class="tech">🖥 Apache</div>
+
+      <div class="tech">📦 XAMPP</div>
+      </div>
+      </section>
+
+      <section class="microsection" id="flujo-arquitectura">
+        <h3>Flujo de Funcionamiento</h3>
+        <div class="architecture-flow">
+        <div class="flow-item">
+        👤
+        <h4>Usuario</h4>
+        <p>Navega por el catálogo y realiza solicitudes.</p>
+        </div>
+
+        <span class="arrow">➜</span>
+
+        <div class="flow-item">
+        🌐
+        <h4>Frontend</h4>
+        <p>Captura la interacción y envía las peticiones.</p>
+        </div>
+        <span class="arrow">➜</span>
+        <div class="flow-item">
+        ⚙️
+        <h4>Backend</h4>
+        <p>Procesa la información y aplica las reglas del negocio.</p>
+        </div>
+        <span class="arrow">➜</span>
+        <div class="flow-item">
+        🗄
+        <h4>Base de Datos</h4>
+        <p>Almacena y recupera la información.</p>
+        </div>
+        </div>
+        <div class="diagram-container">
+          <img src="img/Diagrama de estructura.jpeg" alt="Diagrama de estructura del sistema CosmeticLAB">
+        </div>
+        </section>
+
+        <section class="microsection">
+            <h3>Patrones Aplicados</h3>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Modelo - Vista - Controlador (MVC)</h4>
+                    <p>
+                        Separa la lógica del negocio, la interfaz de usuario y el acceso a los datos,
+                        facilitando el mantenimiento, la reutilización del código y el desarrollo modular.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Cliente - Servidor</h4>
+                    <p>
+                        El navegador actúa como cliente enviando solicitudes al servidor, donde PHP
+                        procesa la información y consulta la base de datos antes de generar la respuesta.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Arquitectura en Capas</h4>
+                    <p>
+                        El sistema se organiza en tres capas: presentación (HTML, CSS y JavaScript),
+                        lógica de negocio (PHP) y persistencia (MySQL), reduciendo el acoplamiento entre componentes.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    <section id="prototipo">
+      <h2>Prototipo</h2>
+      <p>Diseño y prototipo del sistema desarrollado en Figma</p>
+      <div>
+        <a class="btn" href="https://www.figma.com/make/gjM3FcnrjVlFn7k7YI7qbx/CosmeticLAB-Website-Prototype?fullscreen=1&code-node-id=0-9">Ver Prototipo en Figma</a>
+        <a class="btn" href="Prototipo en HTML/index.html">Ver HTML Del Prototipo</a>
+      </div>
+      <div class="section-media">
+        <img src="img/prototipo_figma.png" alt="Prototipo del sistema CosmeticLAB en Figma">
+      </div>
+    </section>
+
+    <section id="documentacion">
+      <h2>Documentación</h2>
+      <p>Documentos y recursos del proyecto</p>
+      <div class="cards">
+        <div class="card doc-card doc-card--ieee">
+          <div class="doc-card__icon">📘</div>
+          <h4>IEEE 830</h4>
+          <p>Especificación de requisitos del software</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-ieee" data-doc-label="IEEE 830" data-doc-icon="📘">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--cronograma">
+          <div class="doc-card__icon">📅</div>
+          <h4>Cronograma Scrum</h4>
+          <p>Planificación, entregables y organización por sprints.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-cronograma" data-doc-label="Cronograma Scrum" data-doc-icon="📅">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--estandares">
+          <div class="doc-card__icon">🧩</div>
+          <h4>Estándares de codificación</h4>
+          <p>Convenciones para mantener el proyecto ordenado y escalable.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-estandares" data-doc-label="Estándares de codificación" data-doc-icon="🧩">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--diccionario">
+          <div class="doc-card__icon">🗂️</div>
+          <h4>Diccionario de Datos</h4>
+          <p>Descripción de entidades, atributos y relaciones del sistema.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-diccionario" data-doc-label="Diccionario de Datos" data-doc-icon="🗂️">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--arquitectura">
+          <div class="doc-card__icon">🏗️</div>
+          <h4>Arquitectura</h4>
+          <p>Organización técnica del sistema y patrones aplicados.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-arquitectura" data-doc-label="Arquitectura" data-doc-icon="🏗️">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--mer">
+          <div class="doc-card__icon">🔗</div>
+          <h4>MER</h4>
+          <p>Modelo entidad-relación de la base de datos del proyecto.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-er" data-doc-label="MER" data-doc-icon="🔗">Ver documento</button>
+        </div>
+
+        <div class="card doc-card doc-card--marco">
+          <div class="doc-card__icon">🧭</div>
+          <h4>Marco de trabajo</h4>
+          <p>Metodología, organización del equipo y herramientas utilizadas.</p>
+          <button class="btn btn-doc" type="button" data-doc-target="doc-marco" data-doc-label="Marco de trabajo" data-doc-icon="🧭">Ver documento</button>
+        </div>
+      </div>
+
+      <div class="doc-template" id="doc-ieee" hidden>
+        <h2>IEEE 830 - Especificación de Requisitos</h2>
+        <p>Documento que establece el alcance, los requisitos y las características que guiaron el desarrollo de CosmeticLAB.</p>
+
+        <div class="doc-section">
+          <h4>🎯 Alcance del sistema</h4>
+          <ul>
+            <li>Catálogo interactivo de productos cosméticos.</li>
+            <li>Visualización por categorías y productos destacados.</li>
+            <li>Panel administrativo para gestionar el catálogo.</li>
+            <li>Formulario de contacto y canales de comunicación.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>⚙️ Requisitos funcionales</h4>
+          <ul>
+            <li>Consultar productos y su información detallada.</li>
+            <li>Filtrar productos por categorías.</li>
+            <li>Autenticación del administrador.</li>
+            <li>Gestión CRUD de productos.</li>
+            <li>Visualizar información institucional y contacto.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🛡️ Requisitos no funcionales</h4>
+          <ul>
+            <li>Diseño responsive y accesible.</li>
+            <li>Tiempo de respuesta menor a 3 segundos.</li>
+            <li>Compatibilidad con los principales navegadores.</li>
+            <li>Seguridad mediante contraseñas cifradas.</li>
+            <li>Código organizado y fácil de mantener.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🖥️ Tecnologías definidas</h4>
+          <p>HTML5, CSS3, Bootstrap, JavaScript, PHP, MySQL, XAMPP y Git/GitHub como herramientas para el desarrollo e implementación del sistema.</p>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Resultado esperado</h4>
+          <p>Obtener una aplicación web funcional, organizada y escalable, con requisitos claramente definidos para facilitar su desarrollo, mantenimiento y evaluación.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="Documentación Proyecto Formativo/CosmeticLAB_SRS_IEEE830 (2).docx" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-cronograma" hidden>
+        <h2>Cronograma de Trabajo y Metodología Scrum</h2>
+        <p>Documento que organizó el desarrollo del proyecto, definiendo las actividades, responsables y entregables de cada etapa mediante la metodología Scrum.</p>
+
+        <div class="doc-section">
+          <h4>📅 Planificación del proyecto</h4>
+          <ul>
+            <li><strong>Sprint 1:</strong> Planeación y levantamiento de requisitos.</li>
+            <li><strong>Sprint 2:</strong> Diseño de arquitectura, base de datos e interfaces.</li>
+            <li><strong>Sprint 3:</strong> Desarrollo del frontend, backend e integración.</li>
+            <li><strong>Sprint 4:</strong> Pruebas, optimización y entrega final.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>👥 Organización del equipo</h4>
+          <ul>
+            <li><strong>Product Owner:</strong> Validación de requerimientos.</li>
+            <li><strong>Scrum Master:</strong> Planificación y seguimiento del proyecto.</li>
+            <li><strong>Developers:</strong> Desarrollo del sistema, diseño e integración.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🔄 Metodología aplicada</h4>
+          <ul>
+            <li>Planeación de Sprint.</li>
+            <li>Reuniones de seguimiento (Daily Scrum).</li>
+            <li>Revisión de entregables.</li>
+            <li>Retrospectiva para mejora continua.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🎯 Resultado</h4>
+          <p>La planificación por Sprint permitió distribuir el trabajo, controlar el avance del proyecto y cumplir los entregables dentro del tiempo establecido.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="Documentación Proyecto Formativo/Cronograma de Trabajo y Metodología Scrum.docx" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-estandares" hidden>
+        <h2>Estándar de Codificación y Nombramiento</h2>
+        <p>Documento que define las convenciones utilizadas durante el desarrollo para mantener un código organizado, legible y fácil de mantener.</p>
+
+        <div class="doc-section">
+          <h4>📂 Organización del proyecto</h4>
+          <ul>
+            <li>Carpetas en minúsculas y separadas con guion bajo (_).</li>
+            <li>Estructura organizada según la función de cada módulo.</li>
+            <li>Separación entre frontend, backend, recursos y configuración.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💻 Convenciones de codificación</h4>
+          <ul>
+            <li>Archivos descriptivos en minúsculas.</li>
+            <li>Variables en <strong>snake_case</strong>.</li>
+            <li>Tablas en <strong>PascalCase</strong> y atributos en minúsculas.</li>
+            <li>Identación uniforme de 4 espacios.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>📝 Buenas prácticas</h4>
+          <ul>
+            <li>Comentarios únicamente cuando aportan valor.</li>
+            <li>Funciones pequeñas y reutilizables.</li>
+            <li>Evitar duplicación de código.</li>
+            <li>Separación entre presentación, lógica y datos.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Beneficios obtenidos</h4>
+          <p>Estas convenciones facilitaron el trabajo colaborativo, mejoraron la legibilidad del código y simplificaron el mantenimiento e integración del sistema.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="Documentación Proyecto Formativo/Estándar de Codificación y Nombramiento de Objetos.docx" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-diccionario" hidden>
+        <h2>Diccionario de Datos</h2>
+        <p>Documento técnico que describe la estructura de la base de datos de CosmeticLAB, especificando las entidades, atributos, tipos de datos y relaciones del sistema.</p>
+
+        <div class="doc-section">
+          <h4>🗄️ Estructura de la Base de Datos</h4>
+          <ul>
+            <li>Producto: información del catálogo cosmético.</li>
+            <li>Categoría: organización y clasificación de productos.</li>
+            <li>Pedido: datos del cliente y seguimiento de compras.</li>
+            <li>DetallePedido: productos asociados a cada pedido.</li>
+            <li>Usuario: acceso y administración del sistema.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>📋 Información documentada</h4>
+          <ul>
+            <li>Nombre y descripción de cada atributo.</li>
+            <li>Tipos de datos y restricciones (PK, FK, NN).</li>
+            <li>Reglas de integridad entre las entidades.</li>
+            <li>Propósito de cada tabla dentro del sistema.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🔗 Relaciones principales</h4>
+          <ul>
+            <li>Categoría (1:N) Producto.</li>
+            <li>Pedido (1:N) DetallePedido.</li>
+            <li>Producto (1:N) DetallePedido.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Beneficios</h4>
+          <p>Facilita el desarrollo de la base de datos, garantiza la consistencia de la información y sirve como referencia para el mantenimiento y futuras ampliaciones del sistema.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="Documentación Proyecto Formativo/DICCIONARIO DE DATOS.docx" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-arquitectura" hidden>
+        <h2>Arquitectura del Sistema</h2>
+        <p>Documento que describe la estructura técnica de CosmeticLAB, la organización de sus componentes y los patrones utilizados durante el desarrollo.</p>
+
+        <div class="doc-section">
+          <h4>🏗️ Arquitectura seleccionada</h4>
+          <ul>
+            <li>Arquitectura monolítica organizada en capas.</li>
+            <li>Patrón Cliente – Servidor.</li>
+            <li>Separación entre presentación, lógica de negocio y persistencia.</li>
+            <li>Diseñada para un MVP de tamaño reducido y fácil mantenimiento.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>⚙️ Organización del sistema</h4>
+          <ul>
+            <li><strong>Presentación:</strong> HTML5, CSS3, Bootstrap y JavaScript.</li>
+            <li><strong>Lógica:</strong> PHP para procesar las reglas del negocio.</li>
+            <li><strong>Persistencia:</strong> MySQL para almacenar la información.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>✅ Justificación</h4>
+          <ul>
+            <li>Reduce la complejidad del desarrollo.</li>
+            <li>Facilita la integración entre componentes.</li>
+            <li>Simplifica el despliegue en XAMPP.</li>
+            <li>Permite futuras ampliaciones sin modificar la estructura principal.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Beneficios</h4>
+          <p>La separación por capas mejora la organización del código, disminuye el acoplamiento entre módulos y facilita el mantenimiento y la evolución del sistema.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="Documentación Proyecto Formativo/Justificación de la Arquitectura y Patrones Utilizados.docx" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-er" hidden>
+        <h2>Modelo Entidad - Relación (MER)</h2>
+        <p>El Modelo Entidad-Relación representa la estructura lógica de la base de datos de CosmeticLAB, mostrando las entidades principales y las relaciones que permiten almacenar y consultar la información del sistema.</p>
+
+        <div class="doc-section">
+          <h4>🗃️ Entidades principales</h4>
+          <ul>
+            <li><strong>Producto:</strong> información del catálogo cosmético.</li>
+            <li><strong>Categoría:</strong> clasificación de los productos.</li>
+            <li><strong>Pedido:</strong> registro de las compras realizadas.</li>
+            <li><strong>DetallePedido:</strong> productos incluidos en cada pedido.</li>
+            <li><strong>Usuario:</strong> acceso al panel administrativo.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🔗 Relaciones del modelo</h4>
+          <ul>
+            <li>Una categoría puede contener múltiples productos (1:N).</li>
+            <li>Un pedido puede incluir varios productos mediante DetallePedido (1:N).</li>
+            <li>Un producto puede aparecer en distintos pedidos (1:N).</li>
+            <li>Las relaciones garantizan la integridad y consistencia de la información.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>📊 Elementos del modelo</h4>
+          <ul>
+            <li>Claves primarias (PK) para identificar cada entidad.</li>
+            <li>Claves foráneas (FK) para establecer relaciones.</li>
+            <li>Atributos que describen la información almacenada.</li>
+            <li>Cardinalidades para definir la interacción entre entidades.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Beneficios</h4>
+          <p>El modelo permitió diseñar una base de datos organizada, reducir la redundancia de información y facilitar el desarrollo, mantenimiento y escalabilidad del sistema.</p>
+        </div>
+
+        <a class="btn doc-modal__link" href="img/Diagrama de MER.png" target="_blank" rel="noopener noreferrer">Abrir documentación completa</a>
+      </div>
+
+      <div class="doc-template" id="doc-marco" hidden>
+        <h2>Marco de Trabajo</h2>
+        <p>Documento que define la metodología, organización y herramientas utilizadas para planificar, desarrollar y gestionar el proyecto CosmeticLAB.</p>
+
+        <div class="doc-section">
+          <h4>🚀 Metodología de desarrollo</h4>
+          <ul>
+            <li>Implementación de la metodología ágil Scrum.</li>
+            <li>Desarrollo iterativo mediante Sprints.</li>
+            <li>Seguimiento continuo del avance del proyecto.</li>
+            <li>Adaptación a cambios durante el desarrollo.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>👥 Organización del equipo</h4>
+          <ul>
+            <li>Distribución de tareas según las habilidades del equipo.</li>
+            <li>Planificación conjunta de actividades y entregables.</li>
+            <li>Comunicación constante para el seguimiento del proyecto.</li>
+            <li>Validación de resultados al finalizar cada Sprint.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>🛠️ Herramientas utilizadas</h4>
+          <ul>
+            <li>Figma para el diseño de interfaces.</li>
+            <li>Lucidchart para diagramas y modelado.</li>
+            <li>Git y GitHub para control de versiones.</li>
+            <li>XAMPP, PHP y MySQL para el desarrollo del sistema.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h4>💡 Resultado</h4>
+          <p>Este marco de trabajo permitió mantener una planificación organizada, mejorar la colaboración del equipo y garantizar el cumplimiento de los objetivos definidos para el proyecto.</p>
+        </div>
+
+        
+      </div>
+    </section>
+
+<section class="highlight-band" id="resumen">
+
+  <div class="section-label">Conclusiones</div>
+
+  <h2>Resultados del Proyecto</h2>
+
+  <div class="highlight-grid">
+
+    <article class="highlight-card">
+      <div class="icon">🎯</div>
+      <h3>Objetivo Cumplido</h3>
+      <p>
+        Se diseñó una solución web que fortalece la presencia digital de CosmeticLAB mediante un catálogo interactivo y un panel administrativo para la gestión de productos y pedidos.
+      </p>
+    </article>
+
+    <article class="highlight-card">
+      <div class="icon">💻</div>
+      <h3>Desarrollo Integral</h3>
+      <p>
+        El proyecto fue construido siguiendo buenas prácticas de ingeniería de software, aplicando documentación, modelado, arquitectura y metodología Scrum.
+      </p>
+    </article>
+
+    <article class="highlight-card">
+      <div class="icon">🚀</div>
+      <h3>Proyección</h3>
+      <p>
+        La arquitectura implementada permite incorporar nuevas funcionalidades y adaptarse al crecimiento futuro del emprendimiento.
+      </p>
+    </article>
+
+  </div>
+
+  <div class="closing-message">
+    <h2>¡Gracias por su atención!</h2>
+    <p>
+      Agradecemos el tiempo dedicado a conocer nuestro proyecto. Estamos atentos para responder sus preguntas y recibir sus observaciones.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  <p><strong>CosmeticLAB</strong> © 2026 | Proyecto SENA - Análisis y Desarrollo de Software</p>
+</footer>
+
+<div class="doc-modal" id="docModal" aria-hidden="true">
+  <div class="doc-modal__backdrop" data-close="true"></div>
+  <div class="doc-modal__dialog" role="dialog" aria-modal="true">
+    <button class="doc-modal__close" id="docModalClose" aria-label="Cerrar ventana">×</button>
+    <div id="docModalContent"></div>
+  </div>
+</div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
